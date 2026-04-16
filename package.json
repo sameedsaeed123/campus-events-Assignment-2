@@ -1,0 +1,7 @@
+{
+  "name": "campus-events-Assignment-2",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "parcel build src/index.html"
+  }
+}
