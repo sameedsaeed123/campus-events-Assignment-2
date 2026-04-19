@@ -1,11 +1,11 @@
 {
   "name": "campus-events-assignment-2",
   "version": "1.0.0",
+  "description": "Campus events multi-page website",
   "scripts": {
-    "build": "parcel build src/index.html"
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html src/destination.html src/packages.html src/gallery.html"
   },
-  "description": "",
-  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sameedsaeed123/campus-events-Assignment-2.git"
@@ -13,9 +13,11 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
   "bugs": {
     "url": "https://github.com/sameedsaeed123/campus-events-Assignment-2/issues"
   },
-  "homepage": "https://github.com/sameedsaeed123/campus-events-Assignment-2#readme"
+  "homepage": "https://github.com/sameedsaeed123/campus-events-Assignment-2#readme",
+  "devDependencies": {
+    "parcel": "^2.15.4"
+  }
 }
