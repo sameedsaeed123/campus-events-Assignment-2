@@ -413,7 +413,152 @@ button { font-family: var(--ff-body); cursor:pointer; }
    MEMBER 1 — destination.html (Destinations Page)
    EDIT ONLY IF YOU ARE MEMBER 1
    ============================================================ */
+/* Filter tabs */
+.dest-filter-bar {
+  background:var(--white);
+  border-bottom:1px solid rgba(201,149,106,.18);
+  padding:0 60px;
+  display:flex; gap:4px; overflow-x:auto;
+}
+.dest-filter-btn {
+  padding:18px 22px;
+  background:none; border:none;
+  border-bottom:3px solid transparent;
+  font-size:.78rem; font-weight:600;
+  letter-spacing:.8px; text-transform:uppercase;
+  color:var(--fog); white-space:nowrap;
+  transition:all var(--tr); cursor:pointer;
+}
+.dest-filter-btn:hover { color:var(--ink); }
+.dest-filter-btn.active { color:var(--rust); border-bottom-color:var(--rust); }
 
+/* Spotlight card */
+.spotlight-card {
+  background:linear-gradient(130deg, #162814 0%, #244d2a 100%);
+  border-radius:var(--r); padding:56px;
+  display:grid; grid-template-columns:1fr 1fr; gap:52px;
+  align-items:center; position:relative; overflow:hidden;
+  margin-bottom:72px;
+}
+.spotlight-card::before {
+  content:'🌿'; position:absolute;
+  right:-24px; bottom:-24px;
+  font-size:13rem; opacity:.05;
+}
+.spotlight-chip {
+  font-size:.68rem; font-weight:600; letter-spacing:2.2px; text-transform:uppercase;
+  color:rgba(180,255,180,.5); margin-bottom:14px;
+}
+.spotlight-card h2 {
+  font-family:var(--ff-head);
+  font-size:2.5rem; font-weight:700;
+  color:var(--white); line-height:1.15; margin-bottom:16px;
+}
+.spotlight-card p { color:rgba(255,255,255,.6); font-size:.96rem; line-height:1.85; margin-bottom:28px; }
+.spotlight-facts {
+  display:grid; grid-template-columns:1fr 1fr; gap:14px;
+}
+.sf-box {
+  background:rgba(255,255,255,.07);
+  border:1px solid rgba(255,255,255,.10);
+  border-radius:10px; padding:16px;
+}
+.sf-val {
+  font-family:var(--ff-head);
+  font-size:1.6rem; font-weight:700; color:var(--clay); margin-bottom:3px;
+}
+.sf-lbl { font-size:.75rem; color:rgba(255,255,255,.42); }
+.spotlight-img {
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:var(--r);
+  height:300px;
+  display:flex; align-items:center; justify-content:center; font-size:7rem;
+}
+
+/* Destination cards */
+.dest-grid {
+  display:grid; grid-template-columns:repeat(3,1fr); gap:28px;
+}
+.dest-card {
+  background:var(--white); border-radius:var(--r);
+  overflow:hidden;
+  border:1.5px solid rgba(201,149,106,.12);
+  box-shadow:0 4px 20px rgba(28,20,16,.08);
+  transition:all var(--tr);
+}
+.dest-card:hover {
+  transform:translateY(-8px);
+  box-shadow:0 24px 52px rgba(28,20,16,.15);
+}
+.dest-thumb {
+  height:238px;
+  display:flex; align-items:center; justify-content:center;
+  font-size:4.5rem; position:relative;
+}
+.dest-rating-chip {
+  position:absolute; top:14px; right:14px;
+  background:rgba(255,255,255,.96); color:var(--ink);
+  font-size:.76rem; font-weight:700;
+  padding:5px 11px; border-radius:50px;
+  display:flex; align-items:center; gap:4px;
+  box-shadow:0 2px 12px rgba(0,0,0,.12);
+}
+.dest-body { padding:24px; }
+.dest-row1 {
+  display:flex; justify-content:space-between;
+  align-items:center; margin-bottom:10px;
+}
+.dest-location {
+  font-size:.7rem; font-weight:600;
+  letter-spacing:1.4px; text-transform:uppercase; color:var(--rust);
+}
+.dest-title {
+  font-family:var(--ff-head);
+  font-size:1.3rem; font-weight:700; color:var(--ink);
+  margin-bottom:9px; line-height:1.25;
+}
+.dest-blurb {
+  font-size:.87rem; color:var(--fog); line-height:1.68; margin-bottom:20px;
+}
+.dest-footer {
+  display:flex; align-items:center; justify-content:space-between;
+  padding-top:14px;
+  border-top:1px solid rgba(201,149,106,.15);
+}
+.dest-metas { display:flex; gap:14px; }
+.dest-metas span { font-size:.77rem; color:var(--fog); }
+.dest-more {
+  font-size:.78rem; font-weight:700; color:var(--rust);
+  background:none; border:none; padding:0;
+  transition:color var(--tr); cursor:pointer;
+}
+.dest-more:hover { color:var(--clay); }
+
+/* Tips */
+.tips-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+.tip-card {
+  background:var(--white); border-radius:var(--r);
+  padding:28px 24px;
+  border-left:4px solid var(--clay);
+  box-shadow:0 4px 16px rgba(28,20,16,.07);
+}
+.tip-icon { font-size:1.8rem; margin-bottom:12px; }
+.tip-ttl {
+  font-family:var(--ff-head);
+  font-size:1.05rem; font-weight:600; color:var(--ink); margin-bottom:8px;
+}
+.tip-txt { font-size:.86rem; color:var(--fog); line-height:1.65; }
+
+@media(max-width:960px) {
+  .dest-filter-bar { padding:0 28px; }
+  .spotlight-card  { grid-template-columns:1fr; padding:36px 28px; }
+  .dest-grid  { grid-template-columns:repeat(2,1fr); }
+  .tips-grid  { grid-template-columns:repeat(2,1fr); }
+}
+@media(max-width:600px) {
+  .dest-grid, .tips-grid { grid-template-columns:1fr; }
+}
 
 /* ============================================================
    MEMBER 2 — packages.html (Packages Page)
