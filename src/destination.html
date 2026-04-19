@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Destinations — VisitPunjab</title>
+  <link rel="stylesheet" href="../styles/style.css"/>
+</head>
+<body>
+
+  <!-- ─── NAVBAR ─────────────────────────────────────────── -->
+  <nav class="navbar">
+    <div class="nav-logo">Visit<em>Punjab</em></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="destination.html" class="active">Destinations</a></li>
+      <li><a href="packages.html">Packages</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+    </ul>
+  </nav>
+
+  <!-- ─── PAGE HERO ───────────────────────────────────────── -->
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <div class="page-hero-chip">📍 Explore Punjab</div>
+      <h1>Discover Our<br><i>Top Destinations</i></h1>
+      <p>24 handpicked places — from ancient forts to peaceful gardens — waiting for your visit.</p>
+    </div>
+  </div>
+
+  <!-- ─── FILTER BAR ──────────────────────────────────────── -->
+  <div class="dest-filter-bar">
+    <button class="dest-filter-btn active" onclick="setFilter(this)">All Places</button>
+    <button class="dest-filter-btn" onclick="setFilter(this)">Heritage</button>
+    <button class="dest-filter-btn" onclick="setFilter(this)">Nature</button>
+    <button class="dest-filter-btn" onclick="setFilter(this)">Religious</button>
+    <button class="dest-filter-btn" onclick="setFilter(this)">Museums</button>
+    <button class="dest-filter-btn" onclick="setFilter(this)">Markets</button>
+  </div>
+
+  <!-- ─── SPOTLIGHT ───────────────────────────────────────── -->
+  <section class="section">
+    <div class="container">
+      <div class="spotlight-card">
+        <div>
+          <div class="spotlight-chip">⭐ Destination of the Month</div>
+          <h2>Badshahi Mosque, Lahore</h2>
+          <p>One of the largest mosques in the world and a masterpiece of Mughal architecture. Built in 1673 by Emperor Aurangzeb, it stands as a symbol of Pakistan's rich cultural heritage.</p>
+          <div class="spotlight-facts">
+            <div class="sf-box"><div class="sf-val">1673</div><div class="sf-lbl">Year Built</div></div>
+            <div class="sf-box"><div class="sf-val">Free</div><div class="sf-lbl">Entry Fee</div></div>
+            <div class="sf-box"><div class="sf-val">60K</div><div class="sf-lbl">Capacity</div></div>
+            <div class="sf-box"><div class="sf-val">9–6 PM</div><div class="sf-lbl">Open Hours</div></div>
+          </div>
+        </div>
+        <div class="spotlight-img">🕌</div>
+      </div>
+
+      <!-- ─── DESTINATION CARDS ──────────────────────────── -->
+      <div class="eyebrow">All Destinations</div>
+      <h2 class="section-title">Places to Visit</h2>
+      <p class="section-lead">Explore the full collection across Punjab.</p>
+
+      <div class="dest-grid">
+
+        <div class="dest-card">
+          <div class="dest-thumb" style="background:linear-gradient(140deg,#2e1a0a,#7a3e18);">
+            🏰
+            <div class="dest-rating-chip">⭐ 4.9</div>
+          </div>
+          <div class="dest-body">
+            <div class="dest-row1">
+              <div class="dest-location">Walled City, Lahore</div>
+              <span class="badge badge-amber">Heritage</span>
+            </div>
+            <div class="dest-title">Lahore Fort</div>
+            <div class="dest-blurb">A UNESCO World Heritage Site spanning centuries of Mughal, Sikh and British rule. Walk through royal halls and ancient ramparts.</div>
+            <div class="dest-footer">
+              <div class="dest-metas">
+                <span>🕐 3–4 hrs</span>
+                <span>💰 Rs. 500</span>
+              </div>
+              <button class="dest-more">Explore →</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="dest-card">
+          <div class="dest-thumb" style="background:linear-gradient(135deg,#1a3d22,#3d7a45);">
+            🌿
+            <div class="dest-rating-chip">⭐ 4.8</div>
+          </div>
+          <div class="dest-body">
+            <div class="dest-row1">
+              <div class="dest-location">Lahore</div>
+              <span class="badge badge-green">Nature</span>
+            </div>
+            <div class="dest-title">Shalimar Gardens</div>
+            <div class="dest-blurb">A UNESCO-listed Mughal garden built in 1641. Three terraced levels, marble pavilions and hundreds of fountains await.</div>
+            <div class="dest-footer">
+              <div class="dest-metas">
+                <span>🕐 2 hrs</span>
+                <span>💰 Rs. 200</span>
+              </div>
+              <button class="dest-more">Explore →</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="dest-card">
+          <div class="dest-thumb" style="background:linear-gradient(135deg,#3d2010,#a05828);">
+            🦁
+            <div class="dest-rating-chip">⭐ 4.7</div>
+          </div>
+          <div class="dest-body">
+            <div class="dest-row1">
+              <div class="dest-location">Lahore</div>
+              <span class="badge badge-green">Nature</span>
+            </div>
+            <div class="dest-title">Lahore Zoo</div>
+            <div class="dest-blurb">Established in 1872, one of South Asia's oldest zoos. Home to over 1,300 animals across hundreds of species.</div>
+            <div class="dest-footer">
+              <div class="dest-metas">
+                <span>🕐 2–3 hrs</span>
+                <span>💰 Rs. 100</span>
+              </div>
+              <button class="dest-more">Explore →</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="dest-card">
+          <div class="dest-thumb" style="background:linear-gradient(135deg,#102040,#1a508a);">
+            🏛️
+            <div class="dest-rating-chip">⭐ 4.6</div>
+          </div>
+          <div class="dest-body">
+            <div class="dest-row1">
+              <div class="dest-location">Lahore</div>
+              <span class="badge badge-blue">Museum</span>
+            </div>
+            <div class="dest-title">Lahore Museum</div>
+            <div class="dest-blurb">The largest museum in Pakistan. Rudyard Kipling's "Wonder House" holds Gandhara sculptures and Mughal miniatures.</div>
+            <div class="dest-footer">
+              <div class="dest-metas">
+                <span>🕐 2–3 hrs</span>
+                <span>💰 Rs. 50</span>
+              </div>
+              <button class="dest-more">Explore →</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="dest-card">
+          <div class="dest-thumb" style="background:linear-gradient(135deg,#4a1a10,#c84428);">
+            🕌
+            <div class="dest-rating-chip">⭐ 4.8</div>
+          </div>
+          <div class="dest-body">
+            <div class="dest-row1">
+              <div class="dest-location">Lahore</div>
+              <span class="badge badge-rose">Religious</span>
+            </div>
+            <div class="dest-title">Data Darbar</div>
+            <div class="dest-blurb">The largest Sufi shrine in South Asia, dedicated to Ali Hujwiri. A place of deep spiritual significance and stunning architecture.</div>
+            <div class="dest-footer">
+              <div class="dest-metas">
+                <span>🕐 1–2 hrs</span>
+                <span>💰 Free</span>
+              </div>
+              <button class="dest-more">Explore →</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="dest-card">
+          <div class="dest-thumb" style="background:linear-gradient(135deg,#281a40,#5a3a90);">
+            🛍️
+            <div class="dest-rating-chip">⭐ 4.5</div>
+          </div>
+          <div class="dest-body">
+            <div class="dest-row1">
+              <div class="dest-location">Walled City, Lahore</div>
+              <span class="badge badge-blue">Market</span>
+            </div>
+            <div class="dest-title">Anarkali Bazaar</div>
+            <div class="dest-blurb">One of the oldest surviving markets in South Asia. Vibrant lanes packed with fabrics, spices, jewellery and street food.</div>
+            <div class="dest-footer">
+              <div class="dest-metas">
+                <span>🕐 2–4 hrs</span>
+                <span>💰 Free</span>
+              </div>
+              <button class="dest-more">Explore →</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── VISITOR TIPS ────────────────────────────────────── -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="eyebrow">Before You Go</div>
+      <h2 class="section-title">Visitor Tips</h2>
+      <p class="section-lead">Make the most of your trip with these helpful reminders.</p>
+      <div class="tips-grid">
+        <div class="tip-card">
+          <div class="tip-icon">🌡️</div>
+          <div class="tip-ttl">Best Time to Visit</div>
+          <div class="tip-txt">October to March is ideal. Winters are mild and pleasant for sightseeing. Avoid peak summer (May–July) when temperatures exceed 40°C.</div>
+        </div>
+        <div class="tip-card">
+          <div class="tip-icon">👗</div>
+          <div class="tip-ttl">Dress Code</div>
+          <div class="tip-txt">Cover shoulders and knees when visiting mosques and shrines. Carry a scarf or shawl. Modest dress is appreciated across all heritage sites.</div>
+        </div>
+        <div class="tip-card">
+          <div class="tip-icon">🚕</div>
+          <div class="tip-ttl">Getting Around</div>
+          <div class="tip-txt">Lahore Metro Bus and Orange Line Metro are affordable. Rickshaws and ride-hailing apps like Careem and inDrive are widely available.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ───────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="footer-brand">Visit<em>Punjab</em></div>
+    <ul class="footer-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="destination.html">Destinations</a></li>
+      <li><a href="packages.html">Packages</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+    </ul>
+    <div class="footer-copy">© 2026 VisitPunjab. All rights reserved.</div>
+  </footer>
+
+  <script>
+    function setFilter(btn){
+      document.querySelectorAll('.dest-filter-btn').forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+    }
+  </script>
+</body>
+</html>
