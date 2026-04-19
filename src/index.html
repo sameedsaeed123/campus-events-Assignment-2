@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home — Visit Punjab</title>
+  <link rel="stylesheet" href="../styles/style.css" />
+  <style>
+    /* ---- Hero ---- */
+    .hero {
+      min-height: 92vh;
+      background: linear-gradient(160deg, var(--deep) 0%, #4a2c10 45%, #7a4a25 100%);
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding: 0 48px;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Cg fill='%23c8a97e' fill-opacity='0.04'%3E%3Cpath d='M0 0h40v40H0V0zm40 40h40v40H40V40zm0-40h2l-2 2V0zm0 4l4-4h2l-6 6V4zm0 4l8-8h2L40 10V8zm0 4L52 0h2L40 14v-2zm0 4L56 0h2L40 18v-2zm0 4L60 0h2L40 22v-2zm0 4L64 0h2L40 26v-2zm0 4L68 0h2L40 30v-2zm0 4L72 0h2L40 34v-2zm0 4L76 0h2L40 38v-2zm0 4L80 0v2L42 40h-2zm4 0L80 4v2L46 40h-2zm4 0L80 8v2L50 40h-2zm4 0l28-28v2L54 40h-2zm4 0l24-24v2L58 40h-2zm4 0l20-20v2L62 40h-2zm4 0l16-16v2L66 40h-2zm4 0l12-12v2L70 40h-2zm4 0l8-8v2l-6 6h-2zm4 0l4-4v2l-2 2h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    .hero-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.18;
+    }
+
+    .orb-1 {
+      width: 500px; height: 500px;
+      background: var(--clay);
+      top: -100px; right: -100px;
+    }
+
+    .orb-2 {
+      width: 300px; height: 300px;
+      background: var(--accent);
+      bottom: -50px; left: 30%;
+    }
+
+    .hero-content {
+      position: relative;
+      max-width: 680px;
+      animation: fadeUp 0.9s ease both;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+
+    .hero-eyebrow span {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--clay);
+    }
+
+    .hero-eyebrow::before {
+      content: '';
+      width: 32px; height: 2px;
+      background: var(--clay);
+      border-radius: 2px;
+    }
+
+    .hero h1 {
+      font-family: var(--font-head);
+      font-size: clamp(2.8rem, 6vw, 5rem);
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      color: var(--clay);
+    }
+
+    .hero-sub {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.62);
+      max-width: 500px;
+      margin-bottom: 40px;
+      line-height: 1.8;
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn-hero-primary {
+      background: var(--accent);
+      color: var(--white);
+      padding: 15px 32px;
+      border-radius: 50px;
+      font-weight: 500;
+      font-size: 0.9rem;
+      letter-spacing: 0.5px;
+      transition: all var(--transition);
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-hero-primary:hover {
+      background: #bf4e25;
+      transform: translateY(-3px);
+      box-shadow: 0 12px 32px rgba(212,90,42,0.4);
+    }
+
+    .btn-hero-ghost {
+      background: rgba(255,255,255,0.08);
+      color: rgba(255,255,255,0.85);
+      padding: 15px 32px;
+      border-radius: 50px;
+      font-weight: 500;
+      font-size: 0.9rem;
+      border: 1px solid rgba(255,255,255,0.2);
+      transition: all var(--transition);
+      cursor: pointer;
+    }
+
+    .btn-hero-ghost:hover {
+      background: rgba(255,255,255,0.15);
+      transform: translateY(-3px);
+    }
+
+    .hero-scroll {
+      position: absolute;
+      bottom: 36px;
+      left: 48px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: rgba(255,255,255,0.4);
+      font-size: 0.75rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .scroll-line {
+      width: 40px; height: 1px;
+      background: rgba(255,255,255,0.25);
+    }
+
+    /* ---- Stats Bar ---- */
+    .stats-bar {
+      background: var(--white);
+      border-bottom: 1px solid rgba(200,169,126,0.2);
+    }
+
+    .stats-inner {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      max-width: 1140px;
+      margin: 0 auto;
+    }
+
+    .stat-item {
+      padding: 32px 40px;
+      border-right: 1px solid rgba(200,169,126,0.2);
+      text-align: center;
+      animation: fadeUp 0.6s ease both;
+    }
+
+    .stat-item:last-child { border-right: none; }
+
+    .stat-num {
+      font-family: var(--font-head);
+      font-size: 2.4rem;
+      color: var(--terra);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .stat-label {
+      font-size: 0.78rem;
+      color: var(--muted);
+      letter-spacing: 0.5px;
+    }
+
+    /* ---- Categories ---- */
+    .categories-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .cat-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 32px 24px;
+      text-align: center;
+      box-shadow: 0 4px 16px rgba(59,42,26,0.07);
+      transition: all var(--transition);
+      border: 1px solid rgba(200,169,126,0.15);
+      cursor: pointer;
+    }
+
+    .cat-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 16px 40px rgba(59,42,26,0.14);
+      border-color: var(--clay);
+    }
+
+    .cat-icon {
+      font-size: 2.4rem;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .cat-name {
+      font-family: var(--font-head);
+      font-size: 1.05rem;
+      color: var(--deep);
+      margin-bottom: 8px;
+    }
+
+    .cat-count {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    /* ---- Featured Destinations ---- */
+    .featured-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 24px;
+      margin-bottom: 24px;
+    }
+
+    .feat-card {
+      border-radius: var(--radius);
+      overflow: hidden;
+      position: relative;
+      box-shadow: var(--shadow);
+      transition: transform var(--transition);
+    }
+
+    .feat-card:hover { transform: scale(1.015); }
+
+    .feat-img {
+      height: 420px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 5rem;
+    }
+
+    .feat-img-sm { height: 190px; font-size: 4rem; }
+
+    .feat-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(20,12,5,0.85) 0%, transparent 55%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 28px;
+    }
+
+    .feat-tag {
+      display: inline-block;
+      background: var(--clay);
+      color: var(--deep);
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 50px;
+      margin-bottom: 10px;
+      width: fit-content;
+    }
+
+    .feat-title {
+      font-family: var(--font-head);
+      font-size: 1.5rem;
+      color: var(--white);
+      margin-bottom: 6px;
+    }
+
+    .feat-title-sm { font-size: 1.15rem; }
+
+    .feat-sub { font-size: 0.85rem; color: rgba(255,255,255,0.65); }
+
+    .feat-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    /* ---- CTA Banner ---- */
+    .cta-banner {
+      background: linear-gradient(135deg, var(--terra) 0%, var(--accent) 100%);
+      border-radius: var(--radius);
+      padding: 60px 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+      flex-wrap: wrap;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-banner::before {
+      content: '✈';
+      position: absolute;
+      right: 200px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 8rem;
+      opacity: 0.08;
+    }
+
+    .cta-text h2 {
+      font-family: var(--font-head);
+      font-size: 2rem;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+
+    .cta-text p { color: rgba(255,255,255,0.75); font-size: 1rem; }
+
+    .btn-cta {
+      background: var(--white);
+      color: var(--terra);
+      padding: 14px 32px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      white-space: nowrap;
+      transition: all var(--transition);
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-cta:hover {
+      background: var(--sand);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    }
+
+    @media (max-width: 900px) {
+      .hero { padding: 0 24px; min-height: 80vh; }
+      .hero-scroll { left: 24px; }
+      .stats-inner { grid-template-columns: repeat(2, 1fr); }
+      .categories-grid { grid-template-columns: repeat(2, 1fr); }
+      .featured-grid { grid-template-columns: 1fr; }
+      .feat-img { height: 300px; }
+      .cta-banner { padding: 40px 32px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-logo">Visit<span>Punjab</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="destination.html">Destinations</a></li>
+      <li><a href="packages.html">Packages</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-orb orb-1"></div>
+    <div class="hero-orb orb-2"></div>
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <span>Discover Pakistan</span>
+      </div>
+      <h1>Explore the Heart of <em>Punjab</em></h1>
+      <p class="hero-sub">
+        From the ancient Mughal wonders of Lahore to the serene rivers of the countryside — 
+        your next unforgettable journey starts here.
+      </p>
+      <div class="hero-ctas">
+        <a href="destination.html" class="btn-hero-primary">Explore Destinations</a>
+        <a href="packages.html" class="btn-hero-ghost">View Packages</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <div class="scroll-line"></div>
+      <span>Scroll to explore</span>
+    </div>
+  </section>
+
+  <!-- STATS BAR -->
+  <div class="stats-bar">
+    <div class="stats-inner">
+      <div class="stat-item">
+        <div class="stat-num">24+</div>
+        <div class="stat-label">Destinations</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">12</div>
+        <div class="stat-label">Tour Packages</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">5K+</div>
+        <div class="stat-label">Happy Visitors</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">3</div>
+        <div class="stat-label">UNESCO Sites</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CATEGORIES -->
+  <section class="section">
+    <div class="container">
+      <div class="section-label">Browse by Interest</div>
+      <h2 class="section-title">What Calls to You?</h2>
+      <div class="divider"></div>
+      <div class="categories-grid">
+        <a href="destination.html" class="cat-card">
+          <span class="cat-icon">🕌</span>
+          <div class="cat-name">Heritage Sites</div>
+          <div class="cat-count">8 destinations</div>
+        </a>
+        <a href="destination.html" class="cat-card">
+          <span class="cat-icon">🌿</span>
+          <div class="cat-name">Nature & Parks</div>
+          <div class="cat-count">6 destinations</div>
+        </a>
+        <a href="packages.html" class="cat-card">
+          <span class="cat-icon">🍽️</span>
+          <div class="cat-name">Food & Culture</div>
+          <div class="cat-count">5 experiences</div>
+        </a>
+        <a href="packages.html" class="cat-card">
+          <span class="cat-icon">🏕️</span>
+          <div class="cat-name">Adventure Tours</div>
+          <div class="cat-count">4 packages</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED DESTINATIONS -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-label">Editor's Picks</div>
+      <h2 class="section-title">Featured Destinations</h2>
+      <p class="section-sub">Hand-picked places that leave every visitor speechless.</p>
+
+      <div class="featured-grid">
+        <a href="destination.html" class="feat-card">
+          <div class="feat-img" style="background: linear-gradient(135deg,#4a2c10,#a0522d);">🕌</div>
+          <div class="feat-overlay">
+            <span class="feat-tag">Most Popular</span>
+            <div class="feat-title">Badshahi Mosque</div>
+            <div class="feat-sub">Old Lahore · Heritage · Free Entry</div>
+          </div>
+        </a>
+        <div>
+          <a href="destination.html" class="feat-card" style="margin-bottom:24px;display:block;">
+            <div class="feat-img feat-img-sm" style="background: linear-gradient(135deg,#2e5a3a,#4a6741);">🌿</div>
+            <div class="feat-overlay">
+              <span class="feat-tag">Nature</span>
+              <div class="feat-title feat-title-sm">Shalimar Gardens</div>
+              <div class="feat-sub">Lahore · UNESCO World Heritage</div>
+            </div>
+          </a>
+          <a href="destination.html" class="feat-card" style="display:block;">
+            <div class="feat-img feat-img-sm" style="background: linear-gradient(135deg,#1a3a5c,#2d6a9f);">🏰</div>
+            <div class="feat-overlay">
+              <span class="feat-tag">Historic</span>
+              <div class="feat-title feat-title-sm">Lahore Fort</div>
+              <div class="feat-sub">Walled City · Mughal Architecture</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-banner">
+        <div class="cta-text">
+          <h2>Ready to Start Your Journey?</h2>
+          <p>Browse curated travel packages designed for every type of traveller.</p>
+        </div>
+        <a href="packages.html" class="btn-cta">See All Packages →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-logo">VisitPunjab</div>
+    <ul class="footer-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="destination.html">Destinations</a></li>
+      <li><a href="packages.html">Packages</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+    </ul>
+    <div class="footer-copy">© 2026 VisitPunjab. All rights reserved.</div>
+  </footer>
+
+</body>
+</html>
