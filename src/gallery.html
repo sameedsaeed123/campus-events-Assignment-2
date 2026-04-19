@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gallery — VisitPunjab</title>
+  <link rel="stylesheet" href="../styles/style.css"/>
+</head>
+<body>
+
+  <!-- ─── NAVBAR ─────────────────────────────────────────── -->
+  <nav class="navbar">
+    <div class="nav-logo">Visit<em>Punjab</em></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="destination.html">Destinations</a></li>
+      <li><a href="packages.html">Packages</a></li>
+      <li><a href="gallery.html" class="active">Gallery</a></li>
+    </ul>
+  </nav>
+
+  <!-- ─── PAGE HERO ───────────────────────────────────────── -->
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <div class="page-hero-chip">📸 Visual Stories</div>
+      <h1>Gallery of<br><i>Punjab's Beauty</i></h1>
+      <p>Real photographs from real visitors — capturing the colours, textures and magic of our region.</p>
+    </div>
+  </div>
+
+  <!-- ─── GALLERY SECTION ─────────────────────────────────── -->
+  <section class="section">
+    <div class="container">
+
+      <!-- Stats -->
+      <div class="gal-stats">
+        <div><div class="gal-stat-num">240+</div><div class="gal-stat-lbl">Photos Shared</div></div>
+        <div><div class="gal-stat-num">18</div><div class="gal-stat-lbl">Locations</div></div>
+        <div><div class="gal-stat-num">52</div><div class="gal-stat-lbl">Contributors</div></div>
+        <div><div class="gal-stat-num">4.9</div><div class="gal-stat-lbl">Avg Rating</div></div>
+      </div>
+
+      <!-- Filter pills -->
+      <div class="gal-pills">
+        <button class="gal-pill active" onclick="setPill(this)">All Photos</button>
+        <button class="gal-pill" onclick="setPill(this)">Heritage</button>
+        <button class="gal-pill" onclick="setPill(this)">Gardens</button>
+        <button class="gal-pill" onclick="setPill(this)">Street Life</button>
+        <button class="gal-pill" onclick="setPill(this)">Food</button>
+        <button class="gal-pill" onclick="setPill(this)">Sunsets</button>
+      </div>
+
+      <!-- Masonry grid -->
+      <div class="masonry">
+
+        <div class="m-item" onclick="openLb('🕌','Badshahi Mosque at Dusk','Lahore · Heritage · 2024','The iconic silhouette of Badshahi Mosque glowing at dusk. The red sandstone turns golden as the sun sets behind the minarets.')">
+          <div class="m-tile m-tile-xl" style="background:linear-gradient(160deg,#1e0e05,#8c3d18);">🕌</div>
+          <div class="m-overlay"><div class="m-ov-title">Badshahi Mosque at Dusk</div><div class="m-ov-sub">Lahore · Heritage</div></div>
+          <div class="m-zoom">🔍</div>
+        </div>
+
+        <div class="m-item" onclick="openLb('🌿','Shalimar Gardens in Bloom','Lahore · Gardens · Spring 2025','The Persian-style terraced gardens burst into colour every spring. The sound of fountains and the fragrance of jasmine fill the air.')">
+          <div class="m-tile m-tile-md" style="background:linear-gradient(135deg,#122814,#357040);">🌿</div>
+          <div class="m-overlay"><div class="m-ov-title">Shalimar Gardens in Bloom</div><div class="m-ov-sub">Lahore · Gardens</div></div>
+          <div class="m-zoom">🔍</div>
+        </div>
+
+        <div class="m-item" onclick="openLb('🛍️','Anarkali Bazaar Colours','Walled City · Street Life · 2024','The narrow lanes of Anarkali are a riot of colour — stacked fabrics, glittering bangles and the hum of Asia\'s oldest market.')">
+          <div class="m-tile m-tile-sm" style="background:linear-gradient(135deg,#4a1070,#8a30b0);">🛍️</div>
+          <div class="m-overlay"><div class="m-ov-title">Anarkali Bazaar Colours</div><div class="m-ov-sub">Walled City · Street Life</div></div>
+          <div class="m-zoom">🔍</div>
+        </div>
+
+        <div class="m-item" onclick="openLb('🏰','Lahore Fort — Sheesh Mahal','Lahore · Heritage · 2025','The Hall of Mirrors shimmers with thousands of tiny glass pieces. Built for Shah Jahan, it remains breathtaking 400 years later.')">
+          <div class="m-tile m-tile-md" style="background:linear-gradient(135deg,#102040,#1a5090);">🏰</div>
+          <div class="m-overlay"><div class="m-ov-title">Lahore Fort — Sheesh Mahal</div><div class="m-ov-sub">Lahore · Heritage</div></div>
+          <div class="m-zoom">🔍</div>
+        </div>
+
+        <div class="m-item" onclick="openLb('🍢','Gawalmandi Food Street','Lahore · Food · Evening','As the sun sets, Gawalmandi transforms into a street food paradise. Kebab grills and simmering karahi fill the air with an irresistible scent.')">
+          <div class="m-tile m-tile-xl" style="background:linear-gradient(135deg,#3a1808,#c03818);">🍢</div>
+          <div class="m-overlay"><div class="m-ov-title">Gawalmandi Food Street</div><div class="m-ov-sub">Lahore · Food</div></div>
+          <div class="m-zoom">🔍</div>
+        </div>
+
+        <div class="m-item" onclick="openLb('🌅','Sunset Over the Ravi','Lahore · Sunsets · 2024','The Ravi River catches the last light in brilliant oranges and pinks. Locals gather along the banks — a peaceful ritual unchanged for generations.')">
+          <div class="m-tile m-tile-sm" style="background:linear-gradient(135deg,#3e2808,#e09020);">🌅</div>
+          <div class="m-overlay"><div class="m-ov-title">Sunset Over the Ravi</div><div class="m-ov-sub">Lahore · Sunsets</div></div>
+          <div class="m-zoom">🔍</div>
+        </div>
+
+        <div class="m-item" onclick="openLb('🕌','Data Darbar — Night View','Lahore · Religious · 2025','At night, Data Darbar is illuminated in golden light. Thousands of devotees arrive and the sound of qawwali fills the courtyard.')">
+          <div class="m-tile m-tile-md" style="background:linear-gradient(135deg,#281a08,#7a5818);">🕌</div>
+          <div class="m-overlay"><div class="m-ov-title">Data Darbar — Night View</div><div class="m-ov-sub">Lahore · Religious</div></div>
+          <div class="m-zoom">🔍</div>
+        </div>
+
+        <div class="m-item" onclick="openLb('🚂','Lahore Railway Station','Lahore · Architecture · 2024','The Victorian-era Lahore Railway Station is a masterpiece of Gothic-Mughal fusion architecture. Its red brick façade has welcomed travellers since 1864.')">
+          <div class="m-tile m-tile-sm" style="background:linear-gradient(135deg,#201028,#502870);">🚂</div>
+          <div class="m-overlay"><div class="m-ov-title">Lahore Railway Station</div><div class="m-ov-sub">Lahore · Architecture</div></div>
+          <div class="m-zoom">🔍</div>
+        </div>
+
+        <div class="m-item" onclick="openLb('🌸','Rose Garden in Spring','Lahore · Gardens · March 2025','Jilani Park bursts into a sea of red and pink every spring during Jashn-e-Baharaan. Over 25,000 rose plants in full bloom.')">
+          <div class="m-tile m-tile-xl" style="background:linear-gradient(135deg,#50102a,#c03870);">🌸</div>
+          <div class="m-overlay"><div class="m-ov-title">Rose Garden in Spring</div><div class="m-ov-sub">Lahore · Gardens</div></div>
+          <div class="m-zoom">🔍</div>
+        </div>
+
+      </div>
+
+      <!-- Tags -->
+      <div class="tag-cloud">
+        <div class="tag-chip">#BadshahiMosque</div>
+        <div class="tag-chip">#LahoreFort</div>
+        <div class="tag-chip">#ShalimarGardens</div>
+        <div class="tag-chip">#LahoriFood</div>
+        <div class="tag-chip">#WalledCity</div>
+        <div class="tag-chip">#PunjabSunsets</div>
+        <div class="tag-chip">#DataDarbar</div>
+        <div class="tag-chip">#VisitPunjab</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ─── SUBMIT CTA ───────────────────────────────────────── -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="submit-cta">
+        <h2>Share Your Punjab Story</h2>
+        <p>Visited one of our destinations? Submit your photos and get featured in our gallery.</p>
+        <button class="btn-submit">📸 Submit Your Photos</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── LIGHTBOX ────────────────────────────────────────── -->
+  <div class="lb-backdrop" id="lbBackdrop" onclick="closeLb(event)">
+    <div class="lb-box">
+      <button class="lb-close" onclick="closeLb()">✕</button>
+      <div class="lb-img" id="lbImg"></div>
+      <div class="lb-body">
+        <div class="lb-title" id="lbTitle"></div>
+        <div class="lb-meta"  id="lbMeta"></div>
+        <div class="lb-desc"  id="lbDesc"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── FOOTER ───────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="footer-brand">Visit<em>Punjab</em></div>
+    <ul class="footer-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="destination.html">Destinations</a></li>
+      <li><a href="packages.html">Packages</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+    </ul>
+    <div class="footer-copy">© 2026 VisitPunjab. All rights reserved.</div>
+  </footer>
+
+  <script>
+    function setPill(btn){
+      document.querySelectorAll('.gal-pill').forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+    }
+    function openLb(emoji,title,meta,desc){
+      const img = document.getElementById('lbImg');
+      img.textContent = emoji;
+      img.style.background = 'linear-gradient(135deg,#2e1a0a,#6a3a18)';
+      document.getElementById('lbTitle').textContent = title;
+      document.getElementById('lbMeta').textContent  = meta;
+      document.getElementById('lbDesc').textContent  = desc;
+      document.getElementById('lbBackdrop').classList.add('open');
+    }
+    function closeLb(e){
+      if(!e || e.target===document.getElementById('lbBackdrop') || e.target.classList.contains('lb-close'))
+        document.getElementById('lbBackdrop').classList.remove('open');
+    }
+  </script>
+
+</body>
+</html>
